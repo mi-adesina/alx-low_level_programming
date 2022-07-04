@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Write 'Programming is like building a multilingual puzzle'
- * Returns 0 always (success)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
