@@ -1,6 +1,6 @@
-#ifdef MAIN_H
+#ifndef MAIN_H
 #define MAIN_H
-#include <std.io>
+#include <stdio.h>
 
 /**
  * Function prototypes
