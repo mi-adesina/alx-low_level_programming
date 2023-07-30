@@ -1,53 +1,36 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include<stdio.h>
+
 /**
- * main - output all the possible combinations of a
- * 2 digits digit without repeating reverse
- * Return: 0 if (successful)
-*/
+ * main - prints all possible different combinations of two digits.
+ *
+ * Return: 0 (success always)
+ */
 int main(void)
 {
-	int i, e;
+	char i;
+	char j;
 
-	i = 48;
-	e = 48;
-
-	while (e < 58)
+	for (i = '0'; i <= '9'; i++)
 	{
-		i = 48;
-		while (i < 58)
+		for (j = '0'; j <= '9'; j++)
 		{
-			if (e != i && e < i)
+			if (j > i)
 			{
-				putchar(e);
 				putchar(i);
-
-				if (i == 57 && e == 56)
+				putchar(j);
+				if (i == '8' && j == '9')
 				{
-					break;
+					continue;
 				}
-
-				putchar(',');
-				putchar(' ');
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-
-			i++;
 		}
-
-		e++;
-
 	}
-
 	putchar('\n');
+
 	return (0);
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Conta
