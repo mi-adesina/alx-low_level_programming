@@ -1,4 +1,27 @@
 #include<stdio.h>
+/**
+ * reduce - a fuction I created so as to reduce
+ *          the number of lines in my main function.
+ * @i: first number
+ * @j: second number
+ * @k: third number
+ * @l: last number
+ *
+ * Return: nothing
+ */
+void reduce(int i, int j, int k, int l)
+{
+	putchar(i);
+	putchar(j);
+	putchar(' ');
+	putchar(k);
+	putchar(l);
+	if (!(i == '9' && j == '8' && k == '9' && l == '9'))
+	{
+		putchar(',');
+		putchar(' ');
+	}
+}
 
 /**
  * main - prints all possible different combinations of two digits.
@@ -30,16 +53,7 @@ int main(void)
 					}
 					else
 					{
-						putchar(i);
-						putchar(j);
-						putchar(' ');
-						putchar(k);
-						putchar(l);
-						if (!(i == '9' && j == '8' && k == '9' && l == '9'))
-						{
-							putchar(',');
-							putchar(' ');
-						}
+						reduce(i, j, k, l);
 					}
 				}
 			}
