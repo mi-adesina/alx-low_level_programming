@@ -1,4 +1,6 @@
-#include "main.h"
+#include <stdio.h>
+
+void __attribute__((constructor)) pre_main_message();
 
 /**
  * pre_main_message - Prints a string before the main function is executed.
