@@ -14,7 +14,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int i, j;
 
 	if (*b == '\0')
-		return ('\0');
+		return (0);
 
 	i = 0;
 	j = 0;
@@ -25,8 +25,8 @@ unsigned int binary_to_uint(const char *b)
 			i += 1;
 		else if (b[j] == '0')
 			i += 0;
-		else if (b[j] != '1' && b[j] != '0')
-			return ('\0');
+		else
+			return (0);
 
 		if (++j)
 			i *= 2;
